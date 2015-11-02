@@ -1,20 +1,31 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
-public class PowerOutFinal
+ class PowerOutFinal
 {
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws NumberFormatException, IOException 
 	{
 		
-		
-		while(true)
+		PowerOutFinal my_work = new PowerOutFinal();
+		my_work.start();
+	}
+/*
+13
+17
+99
+87
+0
+ 
+ */
+	void start() throws NumberFormatException, IOException {
+
+		BufferedReader breader = new BufferedReader(new InputStreamReader(System.in));
+	  	
+	  	String input = "";
+
+		while (((input = breader.readLine()) != null)) 
 		{
-			try
-			{
-				InputStreamReader isreader = new InputStreamReader(System.in);
-			  	BufferedReader breader = new BufferedReader(isreader);
-			  	
-			  	String input = breader.readLine();
 			  	int n = Integer.parseInt(input);
 			  	
 			  	if(n == 0)
@@ -37,13 +48,8 @@ public class PowerOutFinal
 			  		}
 			  	}
 			}
-			catch(Exception IOException)
-			{
-			      System.out.println("File I/O error!");
-			}
 		}
 		
-	}
 	private static int findSmallestM(int n)
 	{
 		boolean [] checked = new boolean[n];
