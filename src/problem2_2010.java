@@ -8,6 +8,21 @@ public class problem2_2010 {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		// 0 7 14 42 18 0 3 41 
+		
+		/*
+		
+		0 = 1
+		7 = 7 / 41 * 84
+		14
+		42
+		18
+		0
+		3
+		41
+		84
+		
+		*/
+		
 		InputStreamReader isreader = new InputStreamReader(System.in);
 		BufferedReader breader = new BufferedReader(isreader);
 		
@@ -33,11 +48,13 @@ public class problem2_2010 {
 	public static Integer[] calculateSizes(Integer[] inputed_sizes){
 		Integer[] output = new Integer[9];
 		int total = 0;
+		int got_total = 0;
+
 		for(int i = 0; i < inputed_sizes.length -1 ; i++){
 			total += inputed_sizes[i];
 			
 		}
-		
+
 		//System.out.println(inputed_sizes[inputed_sizes.length -1]);
 		for(int i = 0; i < inputed_sizes.length; i++){
 			
@@ -46,6 +63,17 @@ public class problem2_2010 {
 			}else{
 				output[i] = 1;		
 			}
+		}
+		
+		for(int i = 0; i < 7 ; i++){
+			got_total += output[i];
+			
+		}
+		
+		int diff = inputed_sizes[inputed_sizes.length -1] - got_total;
+		if(diff != 0){
+			System.out.println("Difference is " + diff);
+			output[4] = output[4]  + diff;
 		}
 		printArr(output);
 		return output;
