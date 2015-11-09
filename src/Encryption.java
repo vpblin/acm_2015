@@ -73,10 +73,10 @@ public class Encryption
 		String input = readInput.readLine();
 		System.out.println("Input " + input);
 		while(true){
-			String row = "empty";
+			String row = "";
 			int number_of_chars = Integer.parseInt(key.charAt(counter) + "");
 			System.out.println("number_of_chars " + number_of_chars);
-
+			
 			for(int j = previous_counter; j < previous_counter + number_of_chars; j++){
 				String Char_Found =  input.charAt(j) +"";
 				for(int i = 0; i < decryptArr[0].length; i++){
@@ -86,7 +86,7 @@ public class Encryption
 					}
 				}
 			}
-			System.out.println(row);
+			System.out.println("row we found : " + row);
 			//input = readInput.readLine();
 			counter ++;
 		}
