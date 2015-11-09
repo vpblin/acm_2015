@@ -91,6 +91,12 @@ public class Encryption
 			counter ++;
 		}
 		
+		for(int k = 0; k < multi.length; k++){
+			for(int i = 0; i < multi[k].length; i++) {
+				System.out.print(multi[k][i]);
+			}
+		System.out.println();
+		}
 	}
 
 
