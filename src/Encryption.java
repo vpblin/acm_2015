@@ -15,14 +15,26 @@ public class Encryption
 			String[] splitString = input.split(":"); //split by colon
 			String [] splitWord = splitString[0].split("");
 
-			String [][] multi = new String[splitString[0].length()][28];
+			String [][] multi = new String[splitString[0].length()][27];
 			for(int k = 1; k < splitWord.length; k++)
 			{
+//				System.out.println("k = " + k);
 				//starts at k-1 because splitWord includes a blank space at location 0
-				multi[k-1][0] = splitWord[k];
+				multi[k-1][0] = splitWord[k].toUpperCase();
 				char theLetter = splitWord[k].charAt(0);
 				int ascii = (int) theLetter;
-//				for(int i = 0; i < )
+				for(int i = 1; i < multi[k-1].length; i++)
+				{
+					ascii++;
+					if(ascii == 91){
+						ascii = 32;
+					}
+					else if (ascii == 33){
+						ascii = 65;
+					}
+					multi[k-1][i] = Character.toString ((char) ascii);
+//					System.out.println(multi[k-1][i]);
+				}
 			}
 			
 						
