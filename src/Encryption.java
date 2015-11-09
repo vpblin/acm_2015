@@ -37,7 +37,13 @@ public class Encryption
 //					System.out.println(multi[k-1][i]);
 				}
 			}
-			
+			for(int k = 0; k < multi.length; k++){
+				for(int i = 0; i < multi[k].length; i++) {
+					System.out.print(multi[k][i]);
+				}
+			System.out.println();
+			}
+
 						
 //			int n = Integer.parseInt(input);
 			getDecryptedWord(multi, splitString[1]);
@@ -91,12 +97,6 @@ public class Encryption
 			counter ++;
 		}
 		
-		for(int k = 0; k < multi.length; k++){
-			for(int i = 0; i < multi[k].length; i++) {
-				System.out.print(multi[k][i]);
-			}
-		System.out.println();
-		}
 	}
 
 
