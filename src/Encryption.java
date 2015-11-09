@@ -15,7 +15,16 @@ public class Encryption
 			String input = breader.readLine();
 			String[] splitString = input.split(":"); //split by colon
 			String [] splitWord = splitString[0].split("");
-
+			
+			int a = 97;
+			String [] compareArray = new String[27];
+			for(int k = 0; k < compareArray.length; k++)
+			{
+				if(a == 123) a = 32;
+				compareArray[k] = Character.toString ((char) a);
+//				System.out.println(compareArray[k]);
+				a++;
+			}
 			String [][] multi = new String[splitString[0].length()][27];
 			for(int k = 1; k < splitWord.length; k++)
 			{
@@ -34,7 +43,7 @@ public class Encryption
 						ascii = 65;
 					}
 					multi[k-1][i] = Character.toString ((char) ascii);
-//					System.out.println(multi[k-1][i]);
+//					System.out.print(multi[k-1][i]);
 				}
 			}
 			for(int k = 0; k < multi.length; k++){
