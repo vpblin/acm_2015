@@ -54,4 +54,27 @@ class Main
           System.out.println (a + " " + b + " " + cyclemax);
         }
     }
+    
+	public static void getDecryptedWord(String[][] decryptArr, int key) throws IOException{
+		for(int j = 0; j < 4; j++){
+			for(int i =0; i < 24; i++){
+				decryptArr[j][i] = " |" + i + ":" + j + "| ";
+			}
+		}
+		key = 2314;
+		
+		
+		int length = String.valueOf(key).length();
+		
+		InputStreamReader streamReader = new InputStreamReader(System.in);
+	  	BufferedReader readInput = new BufferedReader(streamReader);
+
+		String input = readInput.readLine();
+		while(input.length() > 0){
+
+			break;
+		}
+	  	
+	}
+
 }
