@@ -50,11 +50,9 @@ public class Encryption
 				for(int i = 0; i < multi[k].length; i++) {
 					System.out.print(multi[k][i]);
 				}
-			System.out.println();
+				System.out.println();
 			}
-
-						
-//			int n = Integer.parseInt(input);
+			
 			getDecryptedWord(multi, splitString[1]);
 		}
 		catch(Exception IOException)
